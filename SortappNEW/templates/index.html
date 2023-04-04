@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1>Sorteggio interrogazioni</h1>
+    <p><em>Inserimento classe (es.: 3 A) </em></p>
+    <form action="/classroom" method="POST">
+        Classe: <input type="text" name="classe">
+        <input type="submit">
+
+{% endblock %}

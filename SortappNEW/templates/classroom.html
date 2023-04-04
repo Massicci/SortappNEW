@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1>Situazione {{classe.name}}</h1>
+    <p style="text-align: center"><em>Sorteggia lo studente da interrogare:</em></p>
+
+    <form action="/sortstudent" method="POST">
+        <p style="text-align: center">
+        <input type="submit" value="Sorteggia">
+        </p>
+    </form>
+
+    <p style="text-align: left"><em>oppure scegli lo studente da interrogare:</em></p>
+
+
+    <form action="/decidestudent" method="POST">
+        {% for stud in classe.surnames %}
+            {% if classe.members[stud].mark == None %}
+                <p>{{ stud }} <button name="student" value="{{ stud }}">Interroga</button></p>
+            {% else %}
+                <p>{{ stud }}, voto: {{ classe.members[stud].mark }}</p>
+            {% endif %}
+        {% endfor %}
+    </form>
+
+{% endblock %}

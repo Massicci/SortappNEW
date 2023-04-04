@@ -1,0 +1,5 @@
+Di Rocco,6
+Codogni,9
+Meneghelli,9
+Di Corcia,5.5
+Carrara,9

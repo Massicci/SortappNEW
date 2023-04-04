@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1>Interrogazione di {{ stud }} ({{classe.name}})</h1>
+    <p style="text-align: center"><em>Assegna voto dell'interrogazione:</em></p>
+    <form action="/assignmark" method="POST">
+        <p style="text-align: center">
+            <input type="text" name="mark">
+            <button name="student" value="{{ stud }}">Inserisci</button>
+        </p>
+    </form>
+
+{% endblock %}

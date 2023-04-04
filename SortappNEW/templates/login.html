@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1 style="text-align:center">Login</h1>
+<p style="text-align:center"><em>Effettua il login:</em></p>
+
+<form action="/" method="POST" style="text-align: center">
+    Username <input type="text" name="usr">
+    <br>
+    Password <input type="password" name="psswrd">
+    <br><br>
+    <input type="submit" value="Connetti">
+</form>
+
+{% endblock %}
